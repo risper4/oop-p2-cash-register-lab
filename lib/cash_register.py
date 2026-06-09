@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 
 class CashRegister:
-  def __init__(self, discount = 0):
+  def __init__(self, discount = 0, total = 0):
     self._discount = discount
-    self.total = 0
+    self.total = total
     self.items = []
     self.previous_transactions = []
 
