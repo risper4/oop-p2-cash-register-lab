@@ -30,7 +30,7 @@ class CashRegister:
 
   def apply_discount(self) :
     if len(self.previous_transactions) == 0 or self.discount == 0 :
-      print('There is no discount to apply')
+      print('There is no discount to apply.')
       return
     else :
       self.total = self.total * (1 - self.discount/100)
