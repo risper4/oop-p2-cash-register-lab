@@ -29,12 +29,13 @@ class CashRegister:
     self.previous_transactions.append(new_transaction)
 
   def apply_discount(self) :
+    
     if len(self.previous_transactions) == 0 or self.discount == 0 :
       print('There is no discount to apply.')
       return
     else :
-      discounted_total = self.total * (1 - (self.discount/100))
-      print(f'After the discount, the total comes to ${discounted_total}')
+      self.total = self.total * (1 - self.discount/100)
+      print(f'After the discount, the total comes to ${int(self.total)}.')
       
    
   def void_last_transaction(self) :
